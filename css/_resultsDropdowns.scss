@@ -1,0 +1,72 @@
+.results {
+    cursor: pointer;
+    list-style: none;
+    padding: 0;
+    max-width: 350px;
+    font-weight: bold;
+    color: #848586;
+    margin: auto;
+    @include element(result-container) {
+      background: #fff;
+      box-shadow: 1px 3px 15px 2px #e1e5e9;
+      margin: 15px 0;
+    }
+    // Results (top) dropdown
+    @include element(dropdown) {
+      display: flex;
+      justify-content: space-between;
+      padding: 15px 20px;
+      @include modifier(description) {
+        flex: 1;
+        margin-left: 20px;
+      }
+      @include modifier(dropdown-icon-container) {
+      }
+    }
+  
+    // Results Rate Info
+    @include element(info) {
+      border-top: 1px solid #E6E6E6;
+      max-height: 0;
+      overflow: hidden;
+      text-align: center;
+      transition: all .5s ease-in-out;
+      @include modifier(img) {
+        max-width: 200px;
+        box-shadow: -1px 1px 18px -4px rgba(0,0,0,0.6);
+      }
+      @include modifier(title) {
+        font-size: 1.6rem;
+      }
+      @include modifier(diff) {
+        margin: -2px 0;
+        font-size: 1.2rem;
+      }
+      @include modifier(diff-plus) {
+        color: green;
+      }
+      @include modifier(diff-minus) {
+        color: red;
+      }
+      @include modifier(rate) {
+        font-size: 1.3rem;
+      }
+    }
+  
+    // Flags Container
+    @include element(flags) {
+      max-height: 0;
+      overflow: hidden;
+      display: grid;
+      padding: 0 10px;
+      grid-gap: 10px;
+      justify-content: center;
+      border-top: 1px solid #E6E6E6;
+      transition: all .5s ease-in-out;
+      // Flag Img
+      @include modifier(flag-img) {
+        max-width: 100%;
+        box-shadow: -1px 1px 18px -4px rgba(0,0,0,0.6);
+      }
+    }
+  }

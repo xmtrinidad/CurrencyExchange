@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Currency Exchange</title>
+    <script src="https://use.fontawesome.com/c16ef11ed9.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+    <header class="header">
+        <!--- Nav -->
+        <nav class="nav">
+            <div class="nav__bars">
+                <div class="nav__bars--bar nav__bars--bar-top"></div>
+                <div class="nav__bars--bar nav__bars--bar-middle"></div>
+                <div class="nav__bars--bar nav__bars--bar-bottom"></div>
+            </div>
+            <div class="nav__title">
+                <h5>Currency Exchange</h5>
+            </div>
+            <div class="nav__base">
+                <span class="nav__base--date"></span>
+            </div>
+        </nav>
+        <!-- /Nav -->
+
+        <!-- Nav Dropdown -->
+        <ul class="nav-dropdown">
+            <li class="nav-dropdown__item">
+                <div>
+                    <img class="nav-dropdown__item--img" src="https://restcountries.eu/data/usa.svg" alt="nav flag image">
+                </div>
+                <p class="nav-dropdown__item--code">USD</p>
+            </li>
+            <li class="nav-dropdown__item">
+                <div>
+                    <img class="nav-dropdown__item--img" src="https://upload.wikimedia.org/wikipedia/commons/b/b7/Flag_of_Europe.svg" alt="nav flag image">
+                </div>
+                <p class="nav-dropdown__item--code">EUR</p>
+            </li>
+            <li class="nav-dropdown__item">
+                <div>
+                    <img class="nav-dropdown__item--img" src="https://restcountries.eu/data/gbr.svg" alt="nav flag image">
+                </div>
+                <p class="nav-dropdown__item--code">GBP</p>
+            </li>
+            <li class="nav-dropdown__item">
+                <div>
+                    <img class="nav-dropdown__item--img" src="https://restcountries.eu/data/jpn.svg" alt="nav flag image">
+                </div>
+                <p class="nav-dropdown__item--code">JPY</p>
+            </li>
+        </ul>
+        <!-- /Nav Dropdown -->
+    </header>
+    <main class="container">
+        <!-- Base Currency -->
+        <div class="base">
+            <div class="base__selected">
+                <p class="base__selected--title">Base Currency:</p>
+                <p class="base__selected--code darken">USD</p>
+            </div>
+            <div class="base__img-container">
+                <img class="base__img-container--img" src="https://restcountries.eu/data/usa.svg" alt="base icon">
+            </div>
+        </div>
+        <!-- /Base Currency -->
+
+        <!-- Currency Dropdown -->
+        <div class="dropdown">
+            <div class="dropdown__select">
+                <span class="dropdown__select--text">Select Currency</span>
+                <span class="dropdown__select--icon-container">
+                    <i class="dropdown__select--icon fa fa-chevron-down" aria-hidden="true">
+                    </i>
+                </span>
+            </div>
+            <!-- Currencies -->
+            <ul class="dropdown__currencies">
+
+
+                <!-- dynamic content goes here -->
+
+            </ul>
+            <!-- /Currencies -->
+        </div>
+        <!-- /Currency Dropdown -->
+        <hr>
+        <div class="results">
+            <!-- Result Container -->
+            <div class="results__result-container">
+                <!-- Result Dropdown -->
+                <div class="results__dropdown">
+                    <span class="results__dropdown--description-icon">
+                        <i class="fa fa-money fa-lg" aria-hidden="true"></i>
+                    </span>
+                    <span class="results__dropdown--description">
+                        View Rate
+                    </span>
+                    <span class="results__dropdown--dropdown-icon-container">
+                            <i class="results__dropdown--dropdown-icon fa fa-chevron-down" aria-hidden="true"></i>
+                    </span>
+                </div>
+                <!-- /Result Dropdown -->
+
+                <!-- Result Info -->
+                <div class="results__info">
+                    <div>
+                        <img class="results__info--img" src="" alt="flag image">
+                    </div>
+                    <div>
+                        <p class="results__info--title"></p>
+                        <span class="results__info--currency-symbol">$</span>
+                        <p class="results__info--rate"></p>
+                    </div>
+                    <div>
+                        <p class="results__info--title">Difference</p>
+                        <span class="results__info--currency-symbol"></span>
+                        <p class="results__info--rate">
+                        </p>
+                    </div>
+                </div>
+                <!-- /Result Info -->
+
+            </div>
+            <!-- /Result Container -->
+
+            <!-- Result Container -->
+            <div class="results__result-container">
+                <!-- Result Dropdown -->
+                <div class="results__dropdown">
+                    <span class="results__dropdown--description-icon">
+                        <i class="fa fa-flag fa-lg" aria-hidden="true"></i>
+                    </span>
+                    <span class="results__dropdown--description">
+                        View Countries
+                    </span>
+                    <span class="results__dropdown--dropdown-icon-container">
+                            <i class="results__dropdown--dropdown-icon fa fa-chevron-down" aria-hidden="true"></i>
+                    </span>
+                </div>
+                <!-- /Result Dropdown -->
+
+                <!-- Flag Info -->
+                <div class="results__flags">
+
+
+                    <!-- Dynamic content goes here -->
+
+
+                </div>
+                <!-- /Flag Info -->
+
+            </div>
+            <!-- Result Container -->
+
+        </div>
+    </main>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+        crossorigin="anonymous"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/numeral.js/2.0.6/numeral.min.js"></script>
+    <script src="js/variables.js"></script>
+    <script src="js/functions.js"></script>
+    <script src="js/nav.js"></script>
+    <script src="js/dropdown.js"></script>
+    <script src="js/index.js"></script>
+</body>
+
+</html>

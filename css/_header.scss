@@ -1,0 +1,93 @@
+.header {
+  background: #fff;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  @include element(bars) {
+    cursor: pointer;
+    padding: 7px;
+    @include modifier(bar) {
+      width: 28px;
+      height: 4px;
+      background: #ff95b6;
+    }
+    @include modifier(bar-top) {
+      transition: all .3s;
+    }
+    @include modifier(bar-middle) {
+      margin: 4px 0;
+      transition: all .3s;
+    }
+    @include modifier(bar-bottom) {
+      transition: all .3s;
+    }
+  }
+  //TODO: test
+  @include element(title) {}
+  @include element(base) {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    @include modifier(date) {
+      font-weight: bold;
+      font-size: .90rem;
+    }
+  }
+}
+
+.nav-dropdown {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  background: #F3F3F3;
+  max-height: 0;
+  overflow: hidden;
+  transition: all .5s ease-in-out;
+  @include element(item) {
+    cursor: pointer;
+    justify-content: space-around;
+    align-items: center;
+    display: flex;
+    font-weight: bold;
+    font-size: 1.4rem;
+    color: #CBC9D9;
+    padding: 12px 0;
+    border-bottom: 1px solid #E6E6E6;
+    &:first-child {
+      border-top: 1px solid #E6E6E6;
+    }
+    @include modifier(img) {
+      width: 80px;
+    }
+  }
+}
+
+
+// Ham menu transitions
+.nav__bars.open .nav__bars--bar-top  {
+  transform: translateY(6px) rotate(45deg);
+}
+
+.nav__bars.open .nav__bars--bar-middle  {
+  margin: 0;
+  opacity: 0;
+}
+
+.nav__bars.open .nav__bars--bar-bottom  {
+  transform: translateY(-2px) rotate(-45deg);
+}
+
+@media (min-width: 768px) {
+  .nav-dropdown {
+      width: 250px;
+      max-height: auto;
+      position: absolute;
+      left: -400px;
+  }
+}

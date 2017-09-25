@@ -1,0 +1,11 @@
+@import "default";
+@import "mixins";
+@import "header";
+@import "baseCurrency";
+@import "selectCurrency";
+@import "resultsDropdowns";
+@import "transitions";
+body {
+    height: 1200px;
+}
+

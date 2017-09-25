@@ -1,0 +1,21 @@
+.base {
+  text-align: center;
+  @include element(selected) {
+    margin: 10px;
+    @include modifier(title) {
+      font-weight: bold;
+      font-size: 1.8rem;
+    }
+    @include modifier(code) {
+      font-weight: bold;
+      font-size: 1.4rem;
+      color: #b4b6bf;
+    }
+  }
+  @include element(img-container) {
+    @include modifier(img) {
+      box-shadow: -1px 1px 18px -4px rgba(0,0,0,0.6);
+      width: 250px;
+    }
+  }
+}
